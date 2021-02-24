@@ -8,7 +8,17 @@
          :class="{active:activeIndex === item.index}"
          @click="fn(item)"
         >
-        {{item.text}}
+        <!-- {{item.text}} 数据应该由用户自己定义-->
+        <!-- 具名插槽 -->
+        <slot 
+          name="item" 
+          :itemData="item" 
+          v-if="item.id!=='btn'"
+          ></slot>
+          <slot
+            name="btn"
+            v-else
+          ></slot>
        </li>
      </ul>
   </div>
