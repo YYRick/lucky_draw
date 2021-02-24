@@ -1,24 +1,24 @@
 <template>
   <div>
     <!-- 数据->父传子 -->
-    <HelloWorld :list="list">
-        <template #item="itemScope">
+    <cj :list="list">
+        <template #item="itemScope">cd
           <p>用户自己的结构{{itemScope.itemData}}</p>  
         </template>
         <template #btn>
           <span>用户自己的按钮</span>
         </template>
-    </HelloWorld>
+    </cj>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+// import HelloWorld from './components/HelloWorld.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    // HelloWorld
   },
   data(){
     return{
