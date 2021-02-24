@@ -2,7 +2,7 @@
   <div>
     <!-- 数据->父传子 -->
     <cj :list="list">
-        <template #item="itemScope">cd
+        <template #item="itemScope">
           <p>用户自己的结构{{itemScope.itemData}}</p>  
         </template>
         <template #btn>
